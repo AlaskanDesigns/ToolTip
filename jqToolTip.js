@@ -1,5 +1,4 @@
-
-  $(function() {
+$(function() {
     $( document ).tooltip({
       position: {
         my: "center bottom-20",

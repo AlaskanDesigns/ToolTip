@@ -9,35 +9,35 @@ Author URI: http://www.osclass.org/
 Short Name: ToolTip
 Plugin update URI:  tooltip
 */
-/*
-$scheme = ['e_color'];
-switch ($scheme)
-{
+
+function e_color () {
+	$scheme = 'e_color';
+   switch ($scheme){
     case 'blue':
-        echo "jqToolTip_blue.css";
+        echo "blue";
         break;
 
     case 'green':
-        echo "Yum yum\n";
+        echo "Yum yum\n green";
         break;
 
     case 'red':
-        echo "Not bad\n";
+        echo "Not bad\n red";
         break;
 
     case 'purple':
-        echo "Yuck\n";
+        echo "Yuck\n purple";
         break;
 
      case 'black':
-        echo "Yuck\n";
+        echo "Yuck\n black";
         break;
 
     default:
-        echo "I've never tried them before\n";
+        echo "I've never tried them before\n nothing";
         break;
+    }
 }
-*/
 
 function tooltip_call_after_install() {
     // Insert here the code you want to execute after the plugin's install
@@ -90,19 +90,17 @@ function tooltip_form_post() {
             }
         }
 
-function jqToolTip(){
-osc_enqueue_script('jquery');
-osc_enqueue_script('jquery-ui');
-osc_register_script('jqToolTip', osc_base_url().'oc-content/plugins/'.osc_plugin_folder(__FILE__).'jqToolTip.js', array('jquery', 'jquery-ui'));
+
+osc_register_plugin(osc_plugin_path(__FILE__), 'ToolTip');
+osc_register_script('jquery', osc_assets_url('js/jquery.min.js'));
+osc_register_script('jquery-ui', osc_assets_url('js/jquery-ui.min.js'), 'jquery');
+osc_register_script('jqToolTip', osc_base_url() . 'oc-content/plugins/ToolTip/jqToolTip.js', array('jquery', 'jquery-ui'));
 osc_enqueue_script('jqToolTip');
 //osc_register_script('jqToolTip', osc_base_url().'oc-content/plugins/'.osc_plugin_folder(__FILE__).'jqToolTip.js', array('jquery', 'jquery-ui'));
-//echo '<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>';
-//echo '<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />';
-//echo '<script type="text/javascript" src="'.osc_base_url().'oc-content/plugins/ToolTip/jqToolTip.js"></script>';
-//echo '<link href="'.osc_base_url().'oc-content/plugins/ToolTip/jqToolTip.css" rel="stylesheet" type="text/css" />';
-osc_enqueue_style('custom-jquery-tooltip', osc_base_url().'oc-content/plugins/'.osc_plugin_folder(__FILE__).'jqToolTip.css');
+osc_enqueue_style('custom-jquery-tooltip', osc_base_url() . 'oc-content/plugins/ToolTip/jqToolTip.css');
+//osc_enqueue_style('<a href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" rel="stylesheet" />');
+osc_enqueue_style('custom-jquery-tooltip', osc_base_url() .'oc-content/plugins/ToolTip/jquery-ui-1.10.2.custom.css');
 
-}
 
  function jqToolTip_help() {
 
