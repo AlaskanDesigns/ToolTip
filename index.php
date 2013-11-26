@@ -91,6 +91,7 @@ function tooltip_form_post() {
         }
 
 
+<<<<<<< HEAD
 osc_register_plugin(osc_plugin_path(__FILE__), 'ToolTip');
 osc_register_script('jquery', osc_assets_url('js/jquery.min.js'));
 osc_register_script('jquery-ui', osc_assets_url('js/jquery-ui.min.js'), 'jquery');
@@ -100,6 +101,17 @@ osc_enqueue_script('jqToolTip');
 osc_enqueue_style('custom-jquery-tooltip', osc_base_url() . 'oc-content/plugins/ToolTip/jqToolTip.css');
 //osc_enqueue_style('<a href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" rel="stylesheet" />');
 osc_enqueue_style('custom-jquery-tooltip', osc_base_url() .'oc-content/plugins/ToolTip/jquery-ui-1.10.2.custom.css');
+=======
+
+osc_enqueue_script('jquery');
+osc_enqueue_script('jquery-ui');
+osc_register_script('jqToolTip','oc-content/plugins/ToolTip/jqToolTip.js', array('jquery', 'jquery-ui'));
+osc_enqueue_script('jqToolTip');
+//osc_register_script('jqToolTip', osc_base_url().'oc-content/plugins/'.osc_plugin_folder(__FILE__).'jqToolTip.js', array('jquery', 'jquery-ui'));
+osc_enqueue_style('custom-jquery-tooltip', 'oc-content/plugins/ToolTip/jqToolTip.css');
+//osc_enqueue_style('<a href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" rel="stylesheet" />');
+osc_enqueue_style('custom-jquery-tooltip', 'oc-content/plugins/ToolTip/jquery-ui-1.10.2.custom.css');
+>>>>>>> 8b8a25cb984c5ccbe18b9dcdccbf4205c5a9a994
 
 
  function jqToolTip_help() {

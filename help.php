@@ -20,15 +20,34 @@
  */
 ?>
 <style>
+<<<<<<< HEAD
 #radio1 {background: #ea6056;
 }
 #radio1,#radio2,#radio3,#radio4,#radio5,#radio6 {
+=======
+#radio1 {
 	display: block;
 	position: relative;
 	width: 20%;
 	left: 25px;
 	top: -25px;
 	padding: .3em .6em .3em .6em;
+    line-height: 50px;
+	color: white;
+	font-weight: bold;
+	background: #ea6056;
+	border: 2px solid #D9D9D9;
+	border-radius: .3em;
+}
+#radio2 {
+>>>>>>> 8b8a25cb984c5ccbe18b9dcdccbf4205c5a9a994
+	display: block;
+	position: relative;
+	width: 20%;
+	left: 25px;
+	top: -25px;
+	padding: .3em .6em .3em .6em;
+<<<<<<< HEAD
     line-height: 50px;
 	color: white;
 	font-weight: bold;
@@ -51,6 +70,70 @@
 	color: black;
 	font-weight: bold;
 	background: white;
+=======
+   line-height: 50px;
+	color: white;
+	font-weight: bold;
+	background: #35c3d9;
+	border: 2px solid #D9D9D9;
+	border-radius: .3em;
+}
+#radio3 {
+	display: block;
+	position: relative;
+	width: 20%;
+	left: 25px;
+	top: -25px;
+	padding: .3em .6em .3em .6em;
+   line-height: 50px;
+	color: white;
+	font-weight: bold;
+	background: #68b21f;
+	border: 2px solid #D9D9D9;
+	border-radius: .3em;
+}
+#radio4 {
+	display: block;
+	position: relative;
+	width: 20%;
+	left: 25px;
+	top: -25px;
+	padding: .3em .6em .3em .6em;
+   line-height: 50px;
+	color: white;
+	font-weight: bold;
+	background: #c00058;
+	border: 2px solid #D9D9D9;
+	border-radius: .3em;
+}
+#radio5 {
+	display: block;
+	position: relative;
+	width: 20%;
+	left: 25px;
+	top: -25px;
+	padding: .3em .6em .3em .6em;
+    line-height: 50px;
+	color: white;
+	font-weight: bold;
+	background: #000000;
+	border: 2px solid #D9D9D9;
+	border-radius: .3em;
+}
+#radio6 {
+	display: block;
+	position: relative;
+	width: 20%;
+	left: 25px;
+	top: -25px;
+	padding: .3em .6em .3em .6em;
+   line-height: 25px;
+	color: black;
+	font-weight: bold;
+	background: white;
+	border: 2px solid #D9D9D9;
+	border-radius: .3em;
+>>>>>>> 8b8a25cb984c5ccbe18b9dcdccbf4205c5a9a994
 }
 #settings_form {border: 1px solid #ccc; background: #eee; padding: 0 20px 20px;}
 #Settings_form .container {width:425px;height: 200px; float:right;position:absolute; right:25px; top: 25px;}
@@ -99,7 +182,11 @@
                   <input type="radio" name="color"   value="purple">
                   <label id="radio4">
                     <center>
+<<<<<<< HEAD
                       PL
+=======
+                      P
+>>>>>>> 8b8a25cb984c5ccbe18b9dcdccbf4205c5a9a994
                     </center>
                   </label>
                 </li>
@@ -164,12 +251,25 @@ echo  $_POST['color'];
         <p>
           <?php _e('Locate the following line in your bender_theme/functions.php &nbsp (your_theme/main.php in other themes)', 'ToolTip'); ?>
         </p>
+<<<<<<< HEAD
         <pre>&lt;ul class=&quot;r-list&quot;&gt;<br>             &lt;li&gt;<br>                 &lt;h1&gt;&lt;a class=&quot;category &lt;?php echo osc_category_slug() ; ?&gt;&quot; title=&quot;&lt;?php echo osc_category_description(); ?&gt;</pre>
         <p>
           <?php _e('In the above code add title attribute like so:', 'ToolTip'); ?>
         </p>
         <pre>&lt;ul class=&quot;r-list&quot;&gt;<br>             &lt;li&gt;<br>                 &lt;h1&gt;&lt;a class=&quot;category &lt;?php echo osc_category_slug() ; ?&gt;&quot; <span style="color: red;font-weight: 900">title=&quot;&lt;?php echo osc_category_description(); ?&gt;</span></pre>
         <p> Now when the user moves their mouse over the category heading they will see the category description in the ToolTip. </p>
+=======
+        <pre>
+                    &lt;li&gt;&lt;?php if( osc_category_total_items() > 0 ) { ?&gt;&lt;a class=&quot;category cat_&lt;?php echo osc_category_slug() ; ?&gt;&quot; href=&quot;&lt;?php echo osc_search_category_url() ; ?&gt;&quot;&gt;&lt;?php echo osc_category_name() ; ?&gt;&lt;/a&gt; &lt;span&gt;(&lt;?php echo osc_category_total_items() ; ?&gt;)&lt;/span&gt;&lt;/li&gt;
+                </pre>
+        <p>
+          <?php _e('In the above code add title attribute like so:', 'ToolTip'); ?>
+        </p>
+        <pre>
+                     &lt;li&gt;&lt;?php if( osc_category_total_items() > 0 ) { ?&gt;&lt;a class=&quot;category cat_&lt;?php echo osc_category_slug(); ?&gt;&quot; href=&quot;&lt;?php echo osc_search_category_url(); ?&gt;&quot; <span style="color: red;font-weight: 900">title=&quot;&lt;?php echo osc_category_description(); ?&gt;&quot;</span>&gt;&lt;?php echo osc_category_name(); ?&gt;&lt;/a&gt; &lt;span&gt;(&lt;?php echo osc_category_total_items(); ?&gt;)&lt;/span&gt;&lt;/li&gt;
+                </pre>
+        <p> Now when the user moves their mouse over the subcategory they will see the category description in the ToolTip. </p>
+>>>>>>> 8b8a25cb984c5ccbe18b9dcdccbf4205c5a9a994
         <p>Reference: <a href= "http://jqueryui.com/tooltip/" target="_blank">jQuery ToolTip</a></p>
         <p>Last update August 4, 2013</p>
       </fieldset>
